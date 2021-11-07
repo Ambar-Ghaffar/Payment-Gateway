@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="donation.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="spark_icon.png" type="image/png">
+    <title>Donate | Payment</title>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <h1 class="headText"> <strong>Donate For Happiness of Others !</strong></h1>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="navlinks">
+                <li><a class="links" href="./index.html"><strong>HOME</strong> </a></li>
+                <li><a class="links" href="./Donation.html" target="_blank"><strong>DONATE NOW</strong></a></li>
+                <li><a class="links" href="./about.html" target="_blank"><strong>ABOUT</strong></a></li>
+                <li><a class="links" href="./contact.html" target="_blank"><strong>CONTACT US</strong></a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <div class="donation-page">
+        <div class="form">
+
+            <h1 class="heading">
+               “We can change the world and make it a better place. It is in our hands to make a donation.”
+            </h1>
+
+            <div class="discription">
+                <h3>
+                    " The Greatest 'GOOD' is What We Do for Others! "
+                </h3>
+            </div>
+
+            <form class="payment">
+				<form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_IIFFNhZVsOD35h" async> </script> </form>
+<!--
+
+                <button id="rzp-button1">Pay</button>
+               <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+-->
+				
+				
+				<script>
+var options = {
+    "key": "rzp_test_UoqFXQQrf9n1zG", // Enter the Key ID generated from the Dashboard
+    "amount": "150", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    "currency": "INR",
+    "name": "Ambar Arain",
+    "description": "Test Transaction",
+    "image": "https://example.com/your_logo",
+    "order_id": "order_IIDXRoHH10Znon", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+    "handler": function (response){
+        alert(response.razorpay_payment_id);
+        alert(response.razorpay_order_id);
+        alert(response.razorpay_signature)
+    },
+    "prefill": {
+        "name": "Ambar Arain",
+        "email": "ambaraarain@gmail.com",
+        "contact": "03126533552"
+    },
+    "notes": {
+        "address": "Razorpay Corporate Office"
+    },
+    "theme": {
+        "color": "#3399cc"
+    }
+};
+var rzp1 = new Razorpay(options);
+rzp1.on('payment.failed', function (response){
+        alert(response.error.code);
+        alert(response.error.description);
+        alert(response.error.source);
+        alert(response.error.step);
+        alert(response.error.reason);
+        alert(response.error.metadata.order_id);
+        alert(response.error.metadata.payment_id);
+});
+document.getElementById('rzp-button1').onclick = function(e){
+    rzp1.open();
+    e.preventDefault();
+}
+</script>	
+	
+				
+				
+				
+				
+				
+				
+				
+				
+				
+            </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous"></script>
+    <script src="donation-animations.js"></script>
+    <footer>
+        <div class="center">
+            Designed and built by Ambar Arain. <br>
+            ©2021-All rights Reserved.
+        </div>
+    </footer>
+</body>
+</html>
